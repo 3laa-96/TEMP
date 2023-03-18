@@ -39,6 +39,7 @@ addTodoBtn.addEventListener("click", function addTodo() {
 function deleteFunction(event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
+  idToDelete.innerHTML = "";
 }
 
 // 1:01:56
@@ -145,27 +146,38 @@ function deleteFunction(event) {
 // console.log(person);
 // console.log(person.updateProfession());
 
-let total1 = 0;
-let totalOfCart = 0;
-const cartArray = [
-  { name: "apple", price: 4, quantity: 2 },
-  { name: "orange", price: 2, quantity: 4 },
-];
-// function cartTotal(cArray) {
-//   cArray.forEach(function (item) {
-//     total1 += item.price * item.quantity;
+// let total1 = 0;
+// let totalOfCart = 0;
+// const cartArray = [
+//   { name: "apple", price: 4, quantity: 2 },
+//   { name: "orange", price: 2, quantity: 4 },
+// ];
+// // function cartTotal(cArray) {
+// //   cArray.forEach(function (item) {
+// //     total1 += item.price * item.quantity;
+// //   });
+// //   console.log(total1);
+// // }
+
+// // cartTotal(cartArray);
+
+// function displayReceipt(array) {
+//   array.forEach(function (item) {
+//     total = item.price * item.quantity;
+//     console.log(`${item.name} $ ${item.price}* ${item.quantity} = ${total}`);
+//     totalOfCart += total;
 //   });
-//   console.log(total1);
+//   console.log(`total price of items in cart = ${totalOfCart}`);
 // }
+// displayReceipt(cartArray);
 
-// cartTotal(cartArray);
-
-function displayReceipt(array) {
-  array.forEach(function (item) {
-    total = item.price * item.quantity;
-    console.log(`${item.name} $ ${item.price}* ${item.quantity} = ${total}`);
-    totalOfCart += total;
-  });
-  console.log(`total price of items in cart = ${totalOfCart}`);
+let totalX = 0;
+let groceryCart = [
+  { name: "apple", price: 5 },
+  { name: "orange", price: 4 },
+  { name: "eggs", price: 10 },
+];
+function createCart(cart) {
+  cart.forEach(function (items) {});
 }
-displayReceipt(cartArray);
+createCart(groceryCart);

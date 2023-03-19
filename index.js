@@ -18,9 +18,9 @@ function render() {
     deleteBtn.textContent = "delete";
     deleteBtn.style = "margin-left:10px";
     deleteBtn.id = todo.id;
+    todoList.appendChild(element);
     element.appendChild(deleteBtn);
     deleteBtn.onclick = deleteFunction;
-    todoList.appendChild(element);
   });
 }
 
@@ -178,6 +178,16 @@ let groceryCart = [
   { name: "eggs", price: 10 },
 ];
 function createCart(cart) {
-  cart.forEach(function (items) {});
+  cart.forEach(function (items) {
+    const id = new Date().getTime();
+    groceryCart.push({ id: id });
+    let element = document.createElement("div");
+    element.innerText = `${items.name} `;
+    document.body.appendChild(element);
+    const addToCartBtn = document.createElement("button");
+    addToCartBtn.innerText = "ADD";
+    addToCartBtn.id = items.id;
+    element.appendChild(addToCartBtn);
+  });
 }
 createCart(groceryCart);

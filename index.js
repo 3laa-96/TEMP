@@ -39,7 +39,6 @@ addTodoBtn.addEventListener("click", function addTodo() {
 function deleteFunction(event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
-  idToDelete.innerHTML = "";
 }
 
 // 1:01:56
@@ -191,3 +190,27 @@ function createCart(cart) {
   });
 }
 createCart(groceryCart);
+
+function toUpperCase(str) {
+  return str.toUpperCase();
+}
+// const temps = [1, -2, 3, -4, 5, -6];
+// // const freezingTemp = temps.filter((temp) => temp < 0);
+// // temps = freezingTemp;
+// function testTemps(temp) {
+//   const tempsToTest = temp.filter(function (temp) {
+//     return temp < 0;
+//   });
+//   return tempsToTest;
+// }
+// testTemps([-1, -2, 3, 5, -6]);
+// // 1:07:59
+
+function aboveFreezing(temps) {
+  // Assume we're using Fahrenheit
+  const tempsAboveFreezing = temps.filter(function (temp) {
+    return temp > 32;
+  });
+
+  return tempsAboveFreezing;
+}

@@ -39,7 +39,9 @@ addTodoBtn.addEventListener("click", function addTodo() {
 function deleteFunction(event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
+  if (idToDelete==deleteButton)
 }
+// 1:12:42
 
 // 1:01:56
 
@@ -170,47 +172,40 @@ function deleteFunction(event) {
 // }
 // displayReceipt(cartArray);
 
-let totalX = 0;
-let groceryCart = [
-  { name: "apple", price: 5 },
-  { name: "orange", price: 4 },
-  { name: "eggs", price: 10 },
-];
-function createCart(cart) {
-  cart.forEach(function (items) {
-    const id = new Date().getTime();
-    groceryCart.push({ id: id });
-    let element = document.createElement("div");
-    element.innerText = `${items.name} `;
-    document.body.appendChild(element);
-    const addToCartBtn = document.createElement("button");
-    addToCartBtn.innerText = "ADD";
-    addToCartBtn.id = items.id;
-    element.appendChild(addToCartBtn);
-  });
-}
-createCart(groceryCart);
-
-function toUpperCase(str) {
-  return str.toUpperCase();
-}
-// const temps = [1, -2, 3, -4, 5, -6];
-// // const freezingTemp = temps.filter((temp) => temp < 0);
-// // temps = freezingTemp;
-// function testTemps(temp) {
-//   const tempsToTest = temp.filter(function (temp) {
-//     return temp < 0;
+// let totalX = 0;
+// let groceryCart = [
+//   { name: "apple", price: 5 },
+//   { name: "orange", price: 4 },
+//   { name: "eggs", price: 10 },
+// ];
+// function createCart(cart) {
+//   cart.forEach(function (items) {
+//     const id = new Date().getTime();
+//     groceryCart.push({ id: id });
+//     let element = document.createElement("div");
+//     element.innerText = `${items.name} `;
+//     document.body.appendChild(element);
+//     const addToCartBtn = document.createElement("button");
+//     addToCartBtn.innerText = "ADD";
+//     addToCartBtn.id = items.id;
+//     element.appendChild(addToCartBtn);
 //   });
-//   return tempsToTest;
 // }
-// testTemps([-1, -2, 3, 5, -6]);
+// createCart(groceryCart);
+
+// function toUpperCase(str) {
+//   return str.toUpperCase();
+// }
+
 // // 1:07:59
-
-function aboveFreezing(temps) {
-  // Assume we're using Fahrenheit
-  const tempsAboveFreezing = temps.filter(function (temp) {
-    return temp > 32;
-  });
-
-  return tempsAboveFreezing;
-}
+// let arrayOfObjects = [
+//   { name: "egg", color: "white" },
+//   { name: "apple", color: "red" },
+//   { name: "cucumber", color: "green" },
+//   { name: "tomato", color: "red" },
+// ];
+// function removeRed(items) {
+//   return items.filter(function (item) {
+//     return item.color !== "red";
+//   });
+// }

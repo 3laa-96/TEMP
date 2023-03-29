@@ -37,9 +37,15 @@ addTodoBtn.addEventListener("click", function addTodo() {
 
 // Delete function
 function deleteFunction(event) {
+  const targetElement = event.target.id;
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
-  if (idToDelete==deleteButton)
+  if (targetElement === idToDelete) {
+    targetElement.innerHTML = " ";
+    console.log("true");
+  } else {
+    console.log("false");
+  }
 }
 // 1:12:42
 

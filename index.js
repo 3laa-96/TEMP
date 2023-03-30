@@ -1,7 +1,7 @@
 // Defined variables
-let todoList = document.getElementById("todoList");
-let dateInput = document.getElementById("dateInput");
-let todoInput = document.getElementById("todoInput");
+const todoList = document.getElementById("todoList");
+const dateInput = document.getElementById("dateInput");
+const todoInput = document.getElementById("todoInput");
 const addTodoBtn = document.getElementById("addTodoBtn");
 let total = 0;
 let todoS = [];
@@ -37,15 +37,31 @@ addTodoBtn.addEventListener("click", function addTodo() {
 
 // Delete function
 function deleteFunction(event) {
-  const targetElement = event.target.id;
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;
-  if (targetElement === idToDelete) {
-    targetElement.innerHTML = " ";
-    console.log("true");
-  } else {
-    console.log("false");
-  }
+
+  todoS = todoS.filter(function (todo) {
+    // If the id of this todo matches idToDelete, return false
+    // For everything else, return true
+    if (todo.id === idToDelete) {
+      console.log("deleted");
+      return false;
+    } else {
+      console.log("not deleted");
+      return true;
+    }
+    // // const targetElement = event.target.id;
+    // const deleteBtnId = event.target.id;
+    // // const idToDelete = deleteButton.id;
+    // // console.log(deleteBtnId);
+    // todoS = todoS.filter(function (todo) {
+    //   if (todo.id === deleteBtnId) {
+    //     return false;
+    //   } else {
+    //     return true;
+    //   }
+  });
+  render();
 }
 // 1:12:42
 
